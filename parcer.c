@@ -8,7 +8,6 @@ int main(int ac, char **av)
 	t_list	*B;
 	int i;
 
-	A = NULL;
 	if (ac < 2)
 		return (0);
 	arr = parce_args(ac, av, &size);
@@ -18,7 +17,7 @@ int main(int ac, char **av)
     
     while(temp1)
     {
-        printf("%s", (char *)temp1->value);
+        printf("%d", temp1->value);
         temp1 = temp1->next;
     }
 	return 0;

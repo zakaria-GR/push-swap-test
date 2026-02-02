@@ -13,7 +13,7 @@ void	into_stack_a(t_list **head, int *arr, int size)
 	{
 		if (current->next == NULL)
 		{
-			temp = ft_lstnew(&arr[i]);
+			temp = ft_lstnew(arr[i]);
 			ft_lstadd_back(head, temp);
 			current = current->next;
 			i++;

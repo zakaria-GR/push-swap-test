@@ -18,10 +18,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-
 typedef struct s_list
 {
-	int				*value;
+	int				value;
+	int				index;
 	struct s_list	*next;
 }	t_list;
 
