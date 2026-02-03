@@ -12,7 +12,7 @@
 
 #include "../push_swap.h"
 
-void	sa(t_list **stack)
+void	swap(t_list **stack)
 {
 	t_list *temp;
 	t_list *head;

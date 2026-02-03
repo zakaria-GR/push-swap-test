@@ -9,7 +9,7 @@
 /*   Updated: 2025/10/30 17:56:15 by zelguarn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "../push_swap.h"
 
 int	ft_lstsize(t_list *lst)
 {
