@@ -15,11 +15,8 @@ int main(int ac, char **av)
 	//B = NULL;
 	printf("total :%d\n", ft_lstsize(A));
 
-	if (!check_is_sorted(A))
-		printf("not sorted\n");
-	if (check_is_sorted(A))
-		printf("sorted\n");
-
+	// if ((ft_lstsize(A)) == 2)
+	// 	sort_2(&A);
 	if ((ft_lstsize(A)) == 3)
 		sort_3(&A);
 
