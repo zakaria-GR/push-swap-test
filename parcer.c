@@ -11,7 +11,7 @@ int main(int ac, char **av)
 	if (ac < 2)
 		return (0);
 	arr = parce_args(ac, av, &size);
-	into_stack_a(&A, arr, size);
+	*A = into_stack_a(arr, size);
 
 	t_list *temp1 = A;
     

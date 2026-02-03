@@ -43,7 +43,7 @@ int 	is_number(char *s);
 void	fill_numbers(int *arr, int ac, char **av);
 int 	*parce_args(int ac, char **av, int *size);
 void	sa(t_list **t_list);
-void	into_stack_a(t_list **head, int *arr, int size);
+t_list	into_stack_a(int *arr, int size);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 
 #endif
