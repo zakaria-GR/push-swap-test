@@ -12,13 +12,13 @@ int main(int ac, char **av)
 		return (0);
 	arr = parce_args(ac, av, &size);
 	into_stack_a(&A, arr, size);
-	//B = NULL;
+	B = NULL;
 	printf("total :%d\n", ft_lstsize(A));
 
 	// if ((ft_lstsize(A)) == 2)
 	// 	sort_2(&A);
-	if ((ft_lstsize(A)) == 3)
-		sort_3(&A);
+	if ((ft_lstsize(A)) == 5)
+		sort_5(&A, &B);
 
 	t_list *temp1 = A;
 	while (temp1)
