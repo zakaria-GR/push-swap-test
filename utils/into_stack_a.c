@@ -1,4 +1,4 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	into_stack_a(t_list **A, int *arr, int size)
 {

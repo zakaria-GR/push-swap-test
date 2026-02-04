@@ -20,6 +20,8 @@ int main(int ac, char **av)
 	if ((ft_lstsize(A)) == 5)
 		sort_5(&A, &B);
 
+	//push(&A, &B);
+
 	t_list *temp1 = A;
 	while (temp1)
 	{
@@ -30,6 +32,4 @@ int main(int ac, char **av)
 		printf("not sorted\n");
 	if (check_is_sorted(A))
 		printf("sorted\n");
-
-	
 }

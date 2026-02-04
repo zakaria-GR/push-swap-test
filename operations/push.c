@@ -12,16 +12,16 @@
 
 #include "../push_swap.h"
 
-void    push(t_list **stackB, t_list **stackA)
+void    push(t_list **stack1, t_list **stack2)
 {
     t_list *B_head;
     t_list *A_head;
     t_list *temp;
 
-    B_head = *stackB;
-    A_head = *stackA;
+    B_head = *stack1;
+    A_head = *stack2;
     temp = B_head->next;
-    *stackB = temp;
+    *stack1 = temp;
     B_head->next = A_head;
-    *stackA = B_head;
+    *stack2 = B_head;
 }

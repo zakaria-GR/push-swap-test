@@ -4,7 +4,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 INCLUDES = -I.
 
-SRC = main.c into_stack_a.c check_is_sorted.c \
+SRC = main.c utils/into_stack_a.c check_is_sorted.c \
 	parcing/parse_args.c parcing/is_number.c parcing/has_duplicates.c \
 	parcing/ft_atol.c parcing/fill_numbers.c parcing/error_exit.c \
 	parcing/count_total_numbers.c parcing/check_int_range.c \

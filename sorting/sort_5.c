@@ -2,35 +2,29 @@
 
 void	sort_5(t_list **A, t_list **B)
 {
-    int index;
+    int     minN;
+    int     bigN;
+    int     i_min;
+    int     i_max;
 
-    push(B, A);
-    push(B, A);
-    sort_3(A);
-    while(B)
+    minN = find_min(A);
+    bigN = find_big(A);
+    i_min = check_index(*A, minN);
+    i_max = check_index(*A, bigN);
+    while (ft_lstsize(*A) > 3)
     {
-        index = check_index(*A, *B);
-        if (index == 1)
-            push(A, B);
-        if (index == 2)
+        if (i_min > i_max)
         {
+            move_to_top(A, i_max, bigN);
             push(A, B);
-            swap(A);
         }
-        if (index == 3)
+        else
         {
-            rotate(A);
-            rotate(A);
+            move_to_top(A, i_min, minN);
             push(A, B);
-            reverse_rotate(A);
-            reverse_rotate(A);
-        }
-        if (index == 4)
-        {
-            reverse_rotate(A);
-            push(A, B);
-            rotate(A);
-            rotate(A);
         }
     }
+    sort_3(A);
+    push(B, A);
+    push(B, A);
 }

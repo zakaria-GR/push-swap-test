@@ -1,19 +1,21 @@
 #include "../push_swap.h"
 
-int	check_index(t_list *A, t_list *B)
+int	check_index(t_list *A, int N)
 {
-	t_list	*curr;
 	int		index;
+	int 	target_value;
 
-	index = 1;
-	curr = A;
-	while (curr)
+	target_value = N;
+	index = 0;
+	while(A)
 	{
-		if (B->value > A->value)
+		if (A->value == target_value)
+			return (index);
+		else
 		{
 			index++;
+			A = A->next;
 		}
-		curr = curr->next;
 	}
-	return (index);
+	return (-1);
 }
