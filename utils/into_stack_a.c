@@ -4,7 +4,7 @@ void	into_stack_a(t_list **A, int *arr, int size)
 {
 	t_list	*current;
 	t_list	*temp;
-	int	i;
+	int		i;
 
 	i = 0;
 	*A = ft_lstnew(arr[i++]);

@@ -4,23 +4,23 @@ void	sort_5(t_list **A, t_list **B)
 {
     int     minN;
     int     bigN;
-    int     i_min;
-    int     i_max;
+    int     i_minN;
+    int     i_bigN;
 
+    minN = find_min(A);
+    bigN = find_big(A);
     while (ft_lstsize(*A) > 3)
     {
-        minN = find_min(A);
-        bigN = find_big(A);
-        i_min = check_index(*A, minN);
-        i_max = check_index(*A, bigN);
-        if (i_min > i_max)
+        i_minN = check_index(*A, minN);
+        i_bigN = check_index(*A, bigN);
+        if (find_big(A) == bigN)
         {
-            move_to_top(A, i_max, bigN);
+            move_to_top(A, i_bigN);
             push(A, B);
         }
-        else
+        else if(find_min(A) == minN)
         {
-            move_to_top(A, i_min, minN);
+            move_to_top(A, i_minN);
             push(A, B);
         }
     }

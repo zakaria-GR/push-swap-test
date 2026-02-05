@@ -48,9 +48,10 @@ int		ft_lstsize(t_list *lst);
 void	sort_2(t_list **A);
 void	sort_3(t_list **A);
 void	sort_5(t_list **A, t_list **B);
-int		check_index(t_list *A, int N);
+int		check_index(t_list *A, int value);
 int		find_min(t_list **A);
 int 	find_big(t_list **A);
-void	move_to_top(t_list **A, int index, int value);
+void	move_to_top(t_list **A, int index);
+void    sort_big(t_list **A, t_list **B);
 
 #endif

@@ -12,17 +12,32 @@ void	sort_3(t_list **A)
 	if (x < y && x < z && y > z)
 	{
 		swap(A);
+		printf("sa");
 		rotate(A);
+		printf("ra");
 	}
 	if (x > y && x < z && z > y)
+	{
 		swap(A);
+		printf("sa");
+	}
 	if (x > y && x > z && y > z)
 	{
 		swap(A);
+		printf("sa");
 		reverse_rotate(A);
+		printf("rra");
 	}
 	if (x > y && y < z && x > z)
+	{
 		rotate(A);
+		printf("ra");
+	}
+		
 	if (x < y && y > z && x > z)
+	{
 		reverse_rotate(A);
+		printf("rra");
+	}
+		
 }
