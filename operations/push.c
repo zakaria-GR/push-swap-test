@@ -24,5 +24,4 @@ void    push(t_list **stack1, t_list **stack2)
     *stack1 = temp;
     B_head->next = A_head;
     *stack2 = B_head;
-    
 }

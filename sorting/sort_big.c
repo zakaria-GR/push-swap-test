@@ -2,21 +2,29 @@
 
 void    sort_big(t_list **A, t_list **B)
 {
-    int minN;
-    int i_minN;
+    int chunk;
+    int index;
+    t_list  *temp;
     
-    while (ft_lstsize(*A) > 0)
+    chunk = get_chunk(*A);
+    temp = *A;
+    while (ft_lstsize(*A) > 3)
     {
-        minN = find_min(A);
-        i_minN = check_index(*A, minN);
-        //find_min(A) == minN;
-        move_to_top(A, i_minN);
-        push(A, B);
-        printf("pb\n");
+        while (temp)
+        {
+            if (temp->index < chunk)
+            {
+                index = check_index(*A, temp->value);
+                move_to_top(A, index);
+                push(A, B);
+                printf("pa\n");
+            }
+            temp = temp->next;
+        }
+        chunk += chunk;
+        printf("chunk ->%d\n", chunk);
+        temp = *A;
     }
-    while (ft_lstsize(*B) > 0)
-    {
-        push(B, A);
-        printf("pa\n");
-    }
+    sort_3(A);
+    push_back(A, B);
 }

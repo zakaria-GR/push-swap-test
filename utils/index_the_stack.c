@@ -1,18 +1,29 @@
 #include "../push_swap.h"
 
-void    (t_list **A)
+void	index_the_stack(t_list **A)
 {
-    int     index;
-    t_list  *temp;
-    int     value;
+	t_list  *temp;
+	t_list  *curr;
+	int     i;
+	int     index;
+	int		currentV;
 
-    index = 0;
-    temp = A;
-    while(index < ft_lstsize(A))
-    {
-        value = temp->value;
-        if (temp->value < temp->next->value)
-            temp->index = index++;
-
-    }
+	index = 0;
+	i = 0;
+	temp = *A;
+	curr = *A;
+	while (curr)
+	{
+		currentV = curr->value;
+		while (temp)
+		{
+			if (temp->value < currentV)
+				index++;
+			temp = temp->next;
+		}
+		curr->index = index;
+		curr = curr->next;
+		index = 0;
+		temp = *A;
+	}
 }

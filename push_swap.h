@@ -53,5 +53,8 @@ int		find_min(t_list **A);
 int 	find_big(t_list **A);
 void	move_to_top(t_list **A, int index);
 void    sort_big(t_list **A, t_list **B);
+void	index_the_stack(t_list **A);
+int		get_chunk(t_list *A);
+void    push_back(t_list **A, t_list **B);
 
 #endif

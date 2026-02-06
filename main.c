@@ -13,6 +13,7 @@ int main(int ac, char **av)
 	arr = parce_args(ac, av, &size);
 	into_stack_a(&A, arr, size);
 	B = NULL;
+	index_the_stack(&A);
 	//printf("total :%d\n", ft_lstsize(A));
 
 	// if ((ft_lstsize(A)) == 2)
@@ -20,7 +21,6 @@ int main(int ac, char **av)
 	if ((ft_lstsize(A)) > 5)
 		sort_big(&A, &B);
 
-	// push(&A, &B);
 
 	t_list *temp1 = A;
 	while (temp1)

@@ -17,11 +17,13 @@ void	sort_5(t_list **A, t_list **B)
         {
             move_to_top(A, i_bigN);
             push(A, B);
+            printf("pb\n");
         }
         else if(find_min(A) == minN)
         {
             move_to_top(A, i_minN);
             push(A, B);
+            printf("pb\n");
         }
     }
     sort_3(A);
@@ -29,6 +31,7 @@ void	sort_5(t_list **A, t_list **B)
         swap(B);
     push(B, A);
     push(B, A);
+    printf("pa\npa\n");
     if ((*A)->value > (*A)->next->value)
         rotate(A);
 }
