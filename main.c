@@ -14,12 +14,12 @@ int main(int ac, char **av)
 	into_stack_a(&A, arr, size);
 	B = NULL;
 	index_the_stack(&A);
-	//printf("total :%d\n", ft_lstsize(A));
+	printf("total :%d\n", ft_lstsize(A));
 
 	// if ((ft_lstsize(A)) == 2)
 	// 	sort_2(&A);
-	if ((ft_lstsize(A)) > 5)
-		sort_big(&A, &B);
+	// if ((ft_lstsize(A)) > 5)
+	sort_big(&A, &B);
 
 
 	t_list *temp1 = A;

@@ -3,28 +3,27 @@
 void    sort_big(t_list **A, t_list **B)
 {
     int chunk;
-    int index;
-    t_list  *temp;
+    int limit;
+    int i = 0;
+    t_list *temp;
     
     chunk = get_chunk(*A);
+    limit = chunk;
     temp = *A;
-    while (ft_lstsize(*A) > 3)
+    while (*A)
     {
-        while (temp)
-        {
-            if (temp->index < chunk)
+            if ((*A)->index < limit)
             {
-                index = check_index(*A, temp->value);
-                move_to_top(A, index);
                 push(A, B);
-                printf("pa\n");
+                printf("pb\n");
+                i++;
+                if (i == limit)
+                    limit += chunk;
+                printf("%d\n", limit);
             }
-            temp = temp->next;
-        }
-        chunk += chunk;
-        printf("chunk ->%d\n", chunk);
-        temp = *A;
+            else
+                swap(A);
     }
-    sort_3(A);
+    //sort_3(A);
     push_back(A, B);
 }
