@@ -11,33 +11,19 @@ void	sort_3(t_list **A)
 	z = (*A)->next->next->value;
 	if (x < y && x < z && y > z)
 	{
-		swap(A);
-		printf("sa\n");
-		rotate(A);
-		printf("ra\n");
+		sa(A);
+		ra(A);
 	}
 	if (x > y && x < z && z > y)
-	{
-		swap(A);
-		printf("sa\n");
-	}
+		sa(A);
 	if (x > y && x > z && y > z)
 	{
-		swap(A);
-		printf("sa\n");
-		reverse_rotate(A);
-		printf("rra\n");
+		sa(A);
+		rra(A);
 	}
 	if (x > y && y < z && x > z)
-	{
-		rotate(A);
-		printf("ra\n");
-	}
-		
+		ra(A);
 	if (x < y && y > z && x > z)
-	{
-		reverse_rotate(A);
-		printf("rra\n");
-	}
+		rra(A);
 		
 }

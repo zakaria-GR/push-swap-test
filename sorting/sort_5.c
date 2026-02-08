@@ -16,22 +16,19 @@ void	sort_5(t_list **A, t_list **B)
         if (find_big(A) == bigN)
         {
             move_to_top(A, i_bigN);
-            push(A, B);
-            printf("pb\n");
+            pb(A, B);
         }
         else if(find_min(A) == minN)
         {
             move_to_top(A, i_minN);
-            push(A, B);
-            printf("pb\n");
+            pb(A, B);
         }
     }
     sort_3(A);
     if ((*B)->value > (*B)->next->value)
-        swap(B);
-    push(B, A);
-    push(B, A);
-    printf("pa\npa\n");
+        sa(B);
+    pa(B, A);
+    pa(B, A);
     if ((*A)->value > (*A)->next->value)
-        rotate(A);
+        ra(A);
 }

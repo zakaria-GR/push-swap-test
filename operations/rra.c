@@ -12,7 +12,7 @@
 
 #include "../push_swap.h"
 
-void    reverse_rotate(t_list **stack)
+void    rra(t_list **stack)
 {
     t_list *head;
     t_list *lastnode;
@@ -30,4 +30,5 @@ void    reverse_rotate(t_list **stack)
         head = head->next;
     }
     head->next = NULL;
+    printf("rra\n");
 }

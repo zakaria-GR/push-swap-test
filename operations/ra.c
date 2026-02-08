@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pa.c                                               :+:      :+:    :+:   */
+/*   ra.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zelguarn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/02 16:40:06 by zelguarn          #+#    #+#             */
-/*   Updated: 2026/02/02 16:40:10 by zelguarn         ###   ########.fr       */
+/*   Created: 2026/02/02 16:41:16 by zelguarn          #+#    #+#             */
+/*   Updated: 2026/02/02 16:41:31 by zelguarn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    push(t_list **stack1, t_list **stack2)
+void    ra(t_list **stack)
 {
-    t_list *B_head;
-    t_list *A_head;
-    t_list *temp;
+    t_list *head;
+    t_list *firstnode;
 
-    B_head = *stack1;
-    A_head = *stack2;
-    temp = B_head->next;
-    *stack1 = temp;
-    B_head->next = A_head;
-    *stack2 = B_head;
+    head = *stack;
+    firstnode = *stack;
+    while (firstnode->next != NULL)
+    {
+        firstnode = firstnode->next;
+    }
+    firstnode->next = head;
+    *stack = head->next;
+    head->next = NULL;
+    printf("ra\n");
 }

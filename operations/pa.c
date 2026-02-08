@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ra.c                                               :+:      :+:    :+:   */
+/*   pa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zelguarn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/02 16:41:16 by zelguarn          #+#    #+#             */
-/*   Updated: 2026/02/02 16:41:31 by zelguarn         ###   ########.fr       */
+/*   Created: 2026/02/02 16:40:06 by zelguarn          #+#    #+#             */
+/*   Updated: 2026/02/02 16:40:10 by zelguarn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    rotate(t_list **stack)
+void    pa(t_list **stack1, t_list **stack2)
 {
-    t_list *head;
-    t_list *firstnode;
+    t_list *B_head;
+    t_list *A_head;
+    t_list *temp;
 
-    head = *stack;
-    firstnode = *stack;
-    while (firstnode->next != NULL)
-    {
-        firstnode = firstnode->next;
-    }
-    firstnode->next = head;
-    *stack = head->next;
-    head->next = NULL;
+    B_head = *stack1;
+    A_head = *stack2;
+    temp = B_head->next;
+    *stack1 = temp;
+    B_head->next = A_head;
+    *stack2 = B_head;
+    printf("pa\n");
 }

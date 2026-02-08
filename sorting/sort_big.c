@@ -5,25 +5,22 @@ void    sort_big(t_list **A, t_list **B)
     int chunk;
     int limit;
     int i = 0;
-    t_list *temp;
     
     chunk = get_chunk(*A);
     limit = chunk;
-    temp = *A;
-    while (*A)
+    while (ft_lstsize(*A) > 0)
     {
             if ((*A)->index < limit)
             {
-                push(A, B);
-                printf("pb\n");
+                pb(A, B);
+                if ((*B) && (*B)->index < (limit - (chunk / 2)))
+                    rb(B);
                 i++;
                 if (i == limit)
                     limit += chunk;
-                printf("%d\n", limit);
             }
             else
-                swap(A);
+                ra(A);
     }
-    //sort_3(A);
     push_back(A, B);
 }
