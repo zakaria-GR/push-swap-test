@@ -14,13 +14,13 @@
 
 void	sa(t_list **stack)
 {
-	t_list *temp;
-	t_list *head;
+	t_list	*temp;
+	t_list	*head;
 
 	head = *stack;
 	temp = head->next;
 	head->next = temp->next;
 	temp->next = head;
 	*stack = temp;
-	printf("sa\n");
+	printf ("sa\n");
 }

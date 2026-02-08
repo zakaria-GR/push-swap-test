@@ -1,34 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_5.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zelguarn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/08 18:22:46 by zelguarn          #+#    #+#             */
+/*   Updated: 2026/02/08 18:22:50 by zelguarn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 void	sort_5(t_list **A, t_list **B)
 {
-    int     minN;
-    int     bigN;
-    int     i_minN;
-    int     i_bigN;
+	int	min_n;
+	int	i_minn;
 
-    minN = find_min(A);
-    bigN = find_big(A);
-    while (ft_lstsize(*A) > 3)
-    {
-        i_minN = check_index(*A, minN);
-        i_bigN = check_index(*A, bigN);
-        if (find_big(A) == bigN)
-        {
-            move_to_top(A, i_bigN);
-            pb(A, B);
-        }
-        else if(find_min(A) == minN)
-        {
-            move_to_top(A, i_minN);
-            pb(A, B);
-        }
-    }
-    sort_3(A);
-    if ((*B)->value > (*B)->next->value)
-        sa(B);
-    pa(B, A);
-    pa(B, A);
-    if ((*A)->value > (*A)->next->value)
-        ra(A);
+	while (ft_lstsize(*A) > 3)
+	{
+		min_n = find_min(A);
+		i_minn = check_index(*A, min_n);
+		if (find_min(A) == min_n)
+		{
+			move_to_top(A, i_minn);
+			pb(A, B);
+		}
+	}
+	sort_3(A);
+	push_back(A, B);
 }

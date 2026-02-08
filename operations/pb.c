@@ -1,16 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   pb.c                                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zelguarn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/08 18:19:53 by zelguarn          #+#    #+#             */
+/*   Updated: 2026/02/08 18:19:59 by zelguarn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
-void    pb(t_list **stack1, t_list **stack2)
+void	pb(t_list **stack1, t_list **stack2)
 {
-    t_list *B_head;
-    t_list *A_head;
-    t_list *temp;
+	t_list	*bhead;
+	t_list	*ahead;
+	t_list	*temp;
 
-    B_head = *stack1;
-    A_head = *stack2;
-    temp = B_head->next;
-    *stack1 = temp;
-    B_head->next = A_head;
-    *stack2 = B_head;
-    printf("pb\n");
+	bhead = *stack1;
+	ahead = *stack2;
+	temp = bhead->next;
+	*stack1 = temp;
+	bhead->next = ahead;
+	*stack2 = bhead;
+	printf ("pb\n");
 }

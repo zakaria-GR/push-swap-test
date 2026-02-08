@@ -12,17 +12,17 @@
 
 #include "../push_swap.h"
 
-void    pa(t_list **stack1, t_list **stack2)
+void	pa(t_list **stack1, t_list **stack2)
 {
-    t_list *B_head;
-    t_list *A_head;
-    t_list *temp;
+	t_list	*bhead;
+	t_list	*ahead;
+	t_list	*temp;
 
-    B_head = *stack1;
-    A_head = *stack2;
-    temp = B_head->next;
-    *stack1 = temp;
-    B_head->next = A_head;
-    *stack2 = B_head;
-    printf("pa\n");
+	bhead = *stack1;
+	ahead = *stack2;
+	temp = bhead->next;
+	*stack1 = temp;
+	bhead->next = ahead;
+	*stack2 = bhead;
+	printf ("pa\n");
 }
