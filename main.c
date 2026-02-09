@@ -29,7 +29,7 @@ int	main(int ac, char **av)
 		sort_2(&a);
 	if (ft_lstsize(a) == 3)
 		sort_3(&a);
-	if (ft_lstsize(a) == 5)
+	if (ft_lstsize(a) == 5 || ft_lstsize(a) == 4)
 		sort_5(&a, &b);
 	if (ft_lstsize(a) > 5)
 		sort_big(&a, &b);

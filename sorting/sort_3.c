@@ -21,8 +21,6 @@ void	sort_3(t_list **A)
 	x = (*A)->value;
 	y = (*A)->next->value;
 	z = (*A)->next->next->value;
-	if (check_is_sorted(*A))
-		exit(1);
 	if (x < y && x < z && y > z)
 	{
 		sa(A);

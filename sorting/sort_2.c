@@ -14,8 +14,6 @@
 
 void	sort_2(t_list **A)
 {
-	if (check_is_sorted(*A))
-		exit(1);
 	if ((*A)->value > (*A)->next->value)
 		sa(A);
 }
