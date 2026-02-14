@@ -19,9 +19,15 @@ int	*parce_args(int ac, char **av, int *size)
 	*size = count_total_numbers(ac, av);
 	arr = malloc ((*size) * sizeof(int));
 	if (!arr)
+	{
+		free(arr);
 		error_exit();
+	}
 	fill_numbers(arr, ac, av);
 	if (has_duplecates(arr, *size))
+	{
+		free(arr);
 		error_exit();
+	}
 	return (arr);
 }

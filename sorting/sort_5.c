@@ -24,6 +24,8 @@ void	sort_5(t_list **A, t_list **B)
 		if (find_min(A) == min_n)
 		{
 			move_to_top(A, i_minn);
+			if (check_is_sorted(*A) && !(*B))
+				exit(1);
 			pb(A, B);
 		}
 	}

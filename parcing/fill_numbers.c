@@ -29,7 +29,11 @@ void	fill_numbers(int *arr, int ac, char **av)
 		while (split[j])
 		{
 			if (!is_number(split[j]))
+			{
+				free(split[j]);
+				free(split);
 				error_exit();
+			}
 			n = atol(split[j]);
 			if (!check_int_range(n))
 				error_exit();

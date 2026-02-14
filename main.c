@@ -33,4 +33,7 @@ int	main(int ac, char **av)
 		sort_5(&a, &b);
 	if (ft_lstsize(a) > 5)
 		sort_big(&a, &b);
+	lstclear(&a);
+	lstclear(&b);
+	free(arr);
 }

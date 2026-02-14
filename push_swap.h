@@ -61,5 +61,6 @@ void	rrb(t_list **stack);
 void	sa(t_list **stack);
 void	sb(t_list **stack);
 void	move_to_topb(t_list **A, int index);
+void	lstclear(t_list **lst);
 
 #endif

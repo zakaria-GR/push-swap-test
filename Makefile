@@ -15,7 +15,8 @@ SRC = main.c utils/into_stack_a.c check_is_sorted.c \
 	utils/find_min.c sorting/sort_big.c utils/index_the_stack.c \
 	utils/get_chunk.c utils/push_back.c utils/move_to_topb.c \
 	operations/pa.c operations/pb.c operations/ra.c operations/rb.c \
-	operations/rra.c operations/rrb.c operations/sa.c operations/sb.c
+	operations/rra.c operations/rrb.c operations/sa.c operations/sb.c \
+	utils/lstclear.c \
 
 OBJ = $(SRC:.c=.o)
 

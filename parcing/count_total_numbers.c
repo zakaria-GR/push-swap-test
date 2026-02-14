@@ -25,7 +25,10 @@ int	count_total_numbers(int ac, char **av)
 	{
 		split = ft_split(av[i], ' ');
 		if (!split || !split[0])
+		{
+			free(split);
 			error_exit();
+		}
 		j = 0;
 		while (split[j])
 		{

@@ -16,12 +16,12 @@ void	index_the_stack(t_list **A)
 {
 	t_list	*temp;
 	t_list	*curr;
-	int		i;
+	//int		i;
 	int		index;
 	int		current_v;
 
 	index = 0;
-	i = 0;
+	//i = 0;
 	temp = *A;
 	curr = *A;
 	while (curr)
