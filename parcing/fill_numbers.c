@@ -12,6 +12,19 @@
 
 #include "../push_swap.h"
 
+static void	free_split_and_exit(char **split, int j, int *arr)
+{
+	if (split)
+	{
+		while (split[j])
+			free(split[j++]);
+		free(split);
+	}
+	if (arr)
+		free(arr);
+	error_exit();
+}
+
 void	fill_numbers(int *arr, int ac, char **av)
 {
 	char	**split;
@@ -29,14 +42,10 @@ void	fill_numbers(int *arr, int ac, char **av)
 		while (split[j])
 		{
 			if (!is_number(split[j]))
-			{
-				free(split[j]);
-				free(split);
-				error_exit();
-			}
+				free_split_and_exit(split, j, arr);
 			n = atol(split[j]);
 			if (!check_int_range(n))
-				error_exit();
+				free_split_and_exit(split, j, arr);
 			arr[k++] = (int)n;
 			free(split[j++]);
 		}
